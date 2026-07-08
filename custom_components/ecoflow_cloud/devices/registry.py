@@ -26,6 +26,7 @@ from .public import (delta_pro as public_delta_pro,
                      wave3 as public_wave3,
                      delta_pro_ultra as public_delta_pro_ultra,
                      smart_home_panel_2 as public_smart_home_panel_2,
+                     stream as public_stream,
                      )
 from ..devices import BaseDevice, DiagnosticDevice
 
@@ -60,5 +61,16 @@ device_by_product: OrderedDict[str, Type[BaseDevice]] = OrderedDict[str, Type[Ba
     "Wave 3": public_wave3.Wave3,
     "DELTA Pro Ultra": public_delta_pro_ultra.DeltaProUltra,
     "Smart Home Panel 2": public_smart_home_panel_2.SmartHomePanel2,
+    # STREAM family — dual-AC models
+    "STREAM Ultra": public_stream.StreamDualAc,
+    "STREAM Ultra (US)": public_stream.StreamDualAc,
+    "STREAM Ultra X": public_stream.StreamDualAc,
+    "STREAM Pro": public_stream.StreamDualAc,
+    "STREAM AC Pro": public_stream.StreamDualAc,
+    # STREAM family — single-AC model
+    "STREAM Max": public_stream.StreamMax,
+    # STREAM AC is explicitly unsupported for both relay switches per manufacturer docs;
+    # map it to StreamMax as a conservative fallback (single AC).
+    "STREAM AC": public_stream.StreamMax,
     "Diagnostic": DiagnosticDevice
 })

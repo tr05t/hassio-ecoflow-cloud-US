@@ -4,6 +4,7 @@ import logging
 import random
 import time
 from datetime import datetime
+from typing import Any
 
 import aiohttp
 from homeassistant.util import dt
@@ -30,8 +31,6 @@ class EcoflowPublicApiClient(EcoflowApiClient):
         self.access_key = access_key
         self.secret_key = secret_key
         self.group = group
-        self.nonce = str(random.randint(10000, 1000000))
-        self.timestamp = str(int(time.time() * 1000))
 
     async def login(self):
         _LOGGER.info(f"Requesting IoT MQTT credentials")
@@ -79,6 +78,15 @@ class EcoflowPublicApiClient(EcoflowApiClient):
             "RIVER_2": "RIVER_2",
             "RIVER 3": "RIVER_3",
             "RIVER_3": "RIVER_3",
+            # STREAM family — ordered from most-specific to least-specific so that
+            # substrings like "STREAM ULTRA" are matched before "STREAM MAX".
+            "STREAM ULTRA (US)": "STREAM Ultra (US)",
+            "STREAM ULTRA X": "STREAM Ultra X",
+            "STREAM AC PRO": "STREAM AC Pro",
+            "STREAM ULTRA": "STREAM Ultra",
+            "STREAM PRO": "STREAM Pro",
+            "STREAM MAX": "STREAM Max",
+            "STREAM AC": "STREAM AC",
         }
         
         for pattern, product_name in name_mappings.items():
@@ -99,6 +107,21 @@ class EcoflowPublicApiClient(EcoflowApiClient):
 
         self.add_device(device)
         return device
+
+    async def get_stream_main_sn(self, member_sn: str) -> str:
+        """Resolve the main device serial number for a STREAM/BKW multi-device system.
+
+        For systems with a single STREAM device this returns the input SN unchanged.
+        The manufacturer requires the main SN for most system-wide commands.
+        """
+        try:
+            response = await self.call_api("/device/system/main/sn", {"sn": member_sn})
+            return response["data"]["sn"]
+        except Exception as e:
+            _LOGGER.warning(
+                f"Could not resolve STREAM main SN for {member_sn}, using original: {e}"
+            )
+            return member_sn
 
     async def quota_all(self, device_sn: str | None):
         from ..devices.data_holder import PreparedData
@@ -124,18 +147,21 @@ class EcoflowPublicApiClient(EcoflowApiClient):
             except Exception as e:
                 _LOGGER.debug(f"Failed to fetch quota for device {sn}: {e}")
 
-    async def call_api(self, endpoint: str, params: dict[str, str] = None) -> dict:
+    async def call_api(self, endpoint: str, params: dict[str, Any] = None) -> dict:
         async with aiohttp.ClientSession() as session:
             params_str = ""
             if params is not None:
                 params_str = self.__sort_and_concat_params(params)
 
-            sign = self.__gen_sign(params_str)
+            nonce = str(random.randint(10000, 1000000))
+            timestamp = str(int(time.time() * 1000))
+
+            sign = self.__gen_sign(params_str, nonce, timestamp)
 
             headers = {
                 'accessKey': self.access_key,
-                'nonce': self.nonce,
-                'timestamp': self.timestamp,
+                'nonce': nonce,
+                'timestamp': timestamp,
                 'sign': sign
             }
 
@@ -157,16 +183,41 @@ class EcoflowPublicApiClient(EcoflowApiClient):
             status_topic=f"/open/{self.mqtt_info.username}/{device_sn}/status"
         )
 
-    def __gen_sign(self, query_params: str | None) -> str:
-        target_str = f"accessKey={self.access_key}&nonce={self.nonce}&timestamp={self.timestamp}"
+    def __gen_sign(self, query_params: str | None, nonce: str, timestamp: str) -> str:
+        target_str = f"accessKey={self.access_key}&nonce={nonce}&timestamp={timestamp}"
         if query_params:
             target_str = query_params + "&" + target_str
 
         return self.__encrypt_hmac_sha256(target_str, self.secret_key)
 
-    def __sort_and_concat_params(self, params: dict[str, str]) -> str:
+    def __flatten_params(self, obj: Any, prefix: str = "") -> dict[str, str]:
+        result = {}
+        if obj is None:
+            return result
+
+        if isinstance(obj, list):
+            for index, item in enumerate(obj):
+                key = f"{prefix}[{index}]"
+                if isinstance(item, (dict, list)):
+                    result.update(self.__flatten_params(item, key))
+                else:
+                    result[key] = str(item)
+        elif isinstance(obj, dict):
+            for key, value in obj.items():
+                prop_name = f"{prefix}.{key}" if prefix else key
+                if isinstance(value, (dict, list)):
+                    result.update(self.__flatten_params(value, prop_name))
+                elif value is not None:
+                    result[prop_name] = str(value)
+        else:
+            result[prefix] = str(obj)
+
+        return result
+
+    def __sort_and_concat_params(self, params: dict[str, Any]) -> str:
+        flattened = self.__flatten_params(params)
         # Sort the dictionary items by key
-        sorted_items = sorted(params.items(), key=lambda x: x[0])
+        sorted_items = sorted(flattened.items(), key=lambda x: x[0])
 
         # Create a list of "key=value" strings
         param_strings = [f"{key}={value}" for key, value in sorted_items]

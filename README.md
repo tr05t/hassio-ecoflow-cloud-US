@@ -1467,5 +1467,472 @@ Request API Access to Ecoflow United States:
 
 </p></details>
 
+<details><summary> STREAM Ultra (API) <i>(sensors: 46, switches: 2, sliders: 5, selects: 1)</i> </summary>
+<p>
+
+*Sensors*
+- Solar Power
+- Grid Power
+- Load Power
+- Battery Power
+- Battery Level
+- Backup Reserve Level
+- Charge Limit
+- Discharge Limit
+- Feed-in Mode  _(disabled)_
+- Operating Mode: Self-powered  _(disabled)_
+- Operating Mode: AI Mode  _(disabled)_
+- Solar 1 Watts
+- Solar 1 Input Voltage
+- Solar 1 Current
+- Solar 1 Temperature
+- Solar 1 Status  _(disabled)_
+- Solar 1 Error Code  _(disabled)_
+- Solar 2 Watts
+- Solar 2 Input Voltage
+- Solar 2 Current
+- Solar 2 Temperature
+- Solar 2 Status  _(disabled)_
+- Solar 2 Error Code  _(disabled)_
+- Battery Voltage
+- Battery Current
+- Battery Temperature
+- Battery Charge (WN511)
+- Battery Status  _(disabled)_
+- Battery Error Code  _(disabled)_
+- LLC Input Voltage  _(disabled)_
+- LLC Temperature
+- LLC Status  _(disabled)_
+- LLC Error Code  _(disabled)_
+- Inverter On/Off Status
+- Inverter Output Watts
+- Inverter Frequency
+- Inverter Temperature
+- Inverter Status  _(disabled)_
+- Inverter Error Code  _(disabled)_
+- Charge Remaining Time
+- Discharge Remaining Time
+- Discharge Limit (WN511)  _(disabled)_
+- Charge Limit (WN511)  _(disabled)_
+- Rated Power  _(disabled)_
+- LED Brightness  _(disabled)_
+- Status
+
+*Switches*
+- AC 1 
+- AC 2 
+
+*Sliders (numbers)*
+- Backup Reserve Level 
+- Min Discharge Level 
+- Max Charge Level 
+- Brightness 
+- Custom Load Power 
+
+*Selects*
+- Power Supply Priority 
+
+</p></details>
+
+<details><summary> STREAM Ultra (US) (API) <i>(sensors: 46, switches: 2, sliders: 5, selects: 1)</i> </summary>
+<p>
+
+*Sensors*
+- Solar Power
+- Grid Power
+- Load Power
+- Battery Power
+- Battery Level
+- Backup Reserve Level
+- Charge Limit
+- Discharge Limit
+- Feed-in Mode  _(disabled)_
+- Operating Mode: Self-powered  _(disabled)_
+- Operating Mode: AI Mode  _(disabled)_
+- Solar 1 Watts
+- Solar 1 Input Voltage
+- Solar 1 Current
+- Solar 1 Temperature
+- Solar 1 Status  _(disabled)_
+- Solar 1 Error Code  _(disabled)_
+- Solar 2 Watts
+- Solar 2 Input Voltage
+- Solar 2 Current
+- Solar 2 Temperature
+- Solar 2 Status  _(disabled)_
+- Solar 2 Error Code  _(disabled)_
+- Battery Voltage
+- Battery Current
+- Battery Temperature
+- Battery Charge (WN511)
+- Battery Status  _(disabled)_
+- Battery Error Code  _(disabled)_
+- LLC Input Voltage  _(disabled)_
+- LLC Temperature
+- LLC Status  _(disabled)_
+- LLC Error Code  _(disabled)_
+- Inverter On/Off Status
+- Inverter Output Watts
+- Inverter Frequency
+- Inverter Temperature
+- Inverter Status  _(disabled)_
+- Inverter Error Code  _(disabled)_
+- Charge Remaining Time
+- Discharge Remaining Time
+- Discharge Limit (WN511)  _(disabled)_
+- Charge Limit (WN511)  _(disabled)_
+- Rated Power  _(disabled)_
+- LED Brightness  _(disabled)_
+- Status
+
+*Switches*
+- AC 1 
+- AC 2 
+
+*Sliders (numbers)*
+- Backup Reserve Level 
+- Min Discharge Level 
+- Max Charge Level 
+- Brightness 
+- Custom Load Power 
+
+*Selects*
+- Power Supply Priority 
+
+</p></details>
+
+<details><summary> STREAM Ultra X (API) <i>(sensors: 46, switches: 2, sliders: 5, selects: 1)</i> </summary>
+<p>
+
+*Sensors*
+- Solar Power
+- Grid Power
+- Load Power
+- Battery Power
+- Battery Level
+- Backup Reserve Level
+- Charge Limit
+- Discharge Limit
+- Feed-in Mode  _(disabled)_
+- Operating Mode: Self-powered  _(disabled)_
+- Operating Mode: AI Mode  _(disabled)_
+- Solar 1 Watts
+- Solar 1 Input Voltage
+- Solar 1 Current
+- Solar 1 Temperature
+- Solar 1 Status  _(disabled)_
+- Solar 1 Error Code  _(disabled)_
+- Solar 2 Watts
+- Solar 2 Input Voltage
+- Solar 2 Current
+- Solar 2 Temperature
+- Solar 2 Status  _(disabled)_
+- Solar 2 Error Code  _(disabled)_
+- Battery Voltage
+- Battery Current
+- Battery Temperature
+- Battery Charge (WN511)
+- Battery Status  _(disabled)_
+- Battery Error Code  _(disabled)_
+- LLC Input Voltage  _(disabled)_
+- LLC Temperature
+- LLC Status  _(disabled)_
+- LLC Error Code  _(disabled)_
+- Inverter On/Off Status
+- Inverter Output Watts
+- Inverter Frequency
+- Inverter Temperature
+- Inverter Status  _(disabled)_
+- Inverter Error Code  _(disabled)_
+- Charge Remaining Time
+- Discharge Remaining Time
+- Discharge Limit (WN511)  _(disabled)_
+- Charge Limit (WN511)  _(disabled)_
+- Rated Power  _(disabled)_
+- LED Brightness  _(disabled)_
+- Status
+
+*Switches*
+- AC 1 
+- AC 2 
+
+*Sliders (numbers)*
+- Backup Reserve Level 
+- Min Discharge Level 
+- Max Charge Level 
+- Brightness 
+- Custom Load Power 
+
+*Selects*
+- Power Supply Priority 
+
+</p></details>
+
+<details><summary> STREAM Pro (API) <i>(sensors: 46, switches: 2, sliders: 5, selects: 1)</i> </summary>
+<p>
+
+*Sensors*
+- Solar Power
+- Grid Power
+- Load Power
+- Battery Power
+- Battery Level
+- Backup Reserve Level
+- Charge Limit
+- Discharge Limit
+- Feed-in Mode  _(disabled)_
+- Operating Mode: Self-powered  _(disabled)_
+- Operating Mode: AI Mode  _(disabled)_
+- Solar 1 Watts
+- Solar 1 Input Voltage
+- Solar 1 Current
+- Solar 1 Temperature
+- Solar 1 Status  _(disabled)_
+- Solar 1 Error Code  _(disabled)_
+- Solar 2 Watts
+- Solar 2 Input Voltage
+- Solar 2 Current
+- Solar 2 Temperature
+- Solar 2 Status  _(disabled)_
+- Solar 2 Error Code  _(disabled)_
+- Battery Voltage
+- Battery Current
+- Battery Temperature
+- Battery Charge (WN511)
+- Battery Status  _(disabled)_
+- Battery Error Code  _(disabled)_
+- LLC Input Voltage  _(disabled)_
+- LLC Temperature
+- LLC Status  _(disabled)_
+- LLC Error Code  _(disabled)_
+- Inverter On/Off Status
+- Inverter Output Watts
+- Inverter Frequency
+- Inverter Temperature
+- Inverter Status  _(disabled)_
+- Inverter Error Code  _(disabled)_
+- Charge Remaining Time
+- Discharge Remaining Time
+- Discharge Limit (WN511)  _(disabled)_
+- Charge Limit (WN511)  _(disabled)_
+- Rated Power  _(disabled)_
+- LED Brightness  _(disabled)_
+- Status
+
+*Switches*
+- AC 1 
+- AC 2 
+
+*Sliders (numbers)*
+- Backup Reserve Level 
+- Min Discharge Level 
+- Max Charge Level 
+- Brightness 
+- Custom Load Power 
+
+*Selects*
+- Power Supply Priority 
+
+</p></details>
+
+<details><summary> STREAM AC Pro (API) <i>(sensors: 46, switches: 2, sliders: 5, selects: 1)</i> </summary>
+<p>
+
+*Sensors*
+- Solar Power
+- Grid Power
+- Load Power
+- Battery Power
+- Battery Level
+- Backup Reserve Level
+- Charge Limit
+- Discharge Limit
+- Feed-in Mode  _(disabled)_
+- Operating Mode: Self-powered  _(disabled)_
+- Operating Mode: AI Mode  _(disabled)_
+- Solar 1 Watts
+- Solar 1 Input Voltage
+- Solar 1 Current
+- Solar 1 Temperature
+- Solar 1 Status  _(disabled)_
+- Solar 1 Error Code  _(disabled)_
+- Solar 2 Watts
+- Solar 2 Input Voltage
+- Solar 2 Current
+- Solar 2 Temperature
+- Solar 2 Status  _(disabled)_
+- Solar 2 Error Code  _(disabled)_
+- Battery Voltage
+- Battery Current
+- Battery Temperature
+- Battery Charge (WN511)
+- Battery Status  _(disabled)_
+- Battery Error Code  _(disabled)_
+- LLC Input Voltage  _(disabled)_
+- LLC Temperature
+- LLC Status  _(disabled)_
+- LLC Error Code  _(disabled)_
+- Inverter On/Off Status
+- Inverter Output Watts
+- Inverter Frequency
+- Inverter Temperature
+- Inverter Status  _(disabled)_
+- Inverter Error Code  _(disabled)_
+- Charge Remaining Time
+- Discharge Remaining Time
+- Discharge Limit (WN511)  _(disabled)_
+- Charge Limit (WN511)  _(disabled)_
+- Rated Power  _(disabled)_
+- LED Brightness  _(disabled)_
+- Status
+
+*Switches*
+- AC 1 
+- AC 2 
+
+*Sliders (numbers)*
+- Backup Reserve Level 
+- Min Discharge Level 
+- Max Charge Level 
+- Brightness 
+- Custom Load Power 
+
+*Selects*
+- Power Supply Priority 
+
+</p></details>
+
+<details><summary> STREAM Max (API) <i>(sensors: 46, switches: 1, sliders: 5, selects: 1)</i> </summary>
+<p>
+
+*Sensors*
+- Solar Power
+- Grid Power
+- Load Power
+- Battery Power
+- Battery Level
+- Backup Reserve Level
+- Charge Limit
+- Discharge Limit
+- Feed-in Mode  _(disabled)_
+- Operating Mode: Self-powered  _(disabled)_
+- Operating Mode: AI Mode  _(disabled)_
+- Solar 1 Watts
+- Solar 1 Input Voltage
+- Solar 1 Current
+- Solar 1 Temperature
+- Solar 1 Status  _(disabled)_
+- Solar 1 Error Code  _(disabled)_
+- Solar 2 Watts
+- Solar 2 Input Voltage
+- Solar 2 Current
+- Solar 2 Temperature
+- Solar 2 Status  _(disabled)_
+- Solar 2 Error Code  _(disabled)_
+- Battery Voltage
+- Battery Current
+- Battery Temperature
+- Battery Charge (WN511)
+- Battery Status  _(disabled)_
+- Battery Error Code  _(disabled)_
+- LLC Input Voltage  _(disabled)_
+- LLC Temperature
+- LLC Status  _(disabled)_
+- LLC Error Code  _(disabled)_
+- Inverter On/Off Status
+- Inverter Output Watts
+- Inverter Frequency
+- Inverter Temperature
+- Inverter Status  _(disabled)_
+- Inverter Error Code  _(disabled)_
+- Charge Remaining Time
+- Discharge Remaining Time
+- Discharge Limit (WN511)  _(disabled)_
+- Charge Limit (WN511)  _(disabled)_
+- Rated Power  _(disabled)_
+- LED Brightness  _(disabled)_
+- Status
+
+*Switches*
+- AC 
+
+*Sliders (numbers)*
+- Backup Reserve Level 
+- Min Discharge Level 
+- Max Charge Level 
+- Brightness 
+- Custom Load Power 
+
+*Selects*
+- Power Supply Priority 
+
+</p></details>
+
+<details><summary> STREAM AC (API) <i>(sensors: 46, switches: 1, sliders: 5, selects: 1)</i> </summary>
+<p>
+
+*Sensors*
+- Solar Power
+- Grid Power
+- Load Power
+- Battery Power
+- Battery Level
+- Backup Reserve Level
+- Charge Limit
+- Discharge Limit
+- Feed-in Mode  _(disabled)_
+- Operating Mode: Self-powered  _(disabled)_
+- Operating Mode: AI Mode  _(disabled)_
+- Solar 1 Watts
+- Solar 1 Input Voltage
+- Solar 1 Current
+- Solar 1 Temperature
+- Solar 1 Status  _(disabled)_
+- Solar 1 Error Code  _(disabled)_
+- Solar 2 Watts
+- Solar 2 Input Voltage
+- Solar 2 Current
+- Solar 2 Temperature
+- Solar 2 Status  _(disabled)_
+- Solar 2 Error Code  _(disabled)_
+- Battery Voltage
+- Battery Current
+- Battery Temperature
+- Battery Charge (WN511)
+- Battery Status  _(disabled)_
+- Battery Error Code  _(disabled)_
+- LLC Input Voltage  _(disabled)_
+- LLC Temperature
+- LLC Status  _(disabled)_
+- LLC Error Code  _(disabled)_
+- Inverter On/Off Status
+- Inverter Output Watts
+- Inverter Frequency
+- Inverter Temperature
+- Inverter Status  _(disabled)_
+- Inverter Error Code  _(disabled)_
+- Charge Remaining Time
+- Discharge Remaining Time
+- Discharge Limit (WN511)  _(disabled)_
+- Charge Limit (WN511)  _(disabled)_
+- Rated Power  _(disabled)_
+- LED Brightness  _(disabled)_
+- Status
+
+*Switches*
+- AC 
+
+*Sliders (numbers)*
+- Backup Reserve Level 
+- Min Discharge Level 
+- Max Charge Level 
+- Brightness 
+- Custom Load Power 
+
+*Selects*
+- Power Supply Priority 
+
+</p></details>
+
 ## How to
 - [Add/update device](docs/integration.md)
